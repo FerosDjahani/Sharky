@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharky</title>
+    <!-- SCRIPTS -->
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/charackter.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/fish.class.js"></script>
+    <script src="models/fish-green.class.js"></script>
+    <script src="models/fish-orange.class.js"></script>
+    <script src="models/fish-purple.class.js"></script>
+
+    <script src="models/jelly-fish-green-class.js"></script>
+    <script src="models/jelly-fish-purple.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/energybar-character.class.js"></script>
+    <script src="models/energybar-poison.class.js"></script>
+    <script src="models/energybar-coins.class.js"></script>
+    <script src="models/energybar-endboss.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/coins.class.js"></script>
+    <script src="models/poison.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/throwable-object-bubble.class.js"></script>
+    <script src="models/throwable-object-poison.class.js"></script>
+    <script src="game.js"></script>
+    <script src="levels/level1.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- ONLOAD -->
+
+<body>
+
+    <div id="bg-img" class="bg-img">
+        <div id="left" class="mobile_controlls " ontouchstart="touchDownLeft()" ontouchend="touchUpLeft()">
+
+            <img src="./img/arrow_left.png"> </div>
+
+        <div id="right" class="mobile_controlls " ontouchstart="touchDownRight()" ontouchend="touchUpRight()"> <img src="./img/arrow_right.png"> </div>
+        <div id="jump" class="mobile_controlls " ontouchstart="touchDownJump()" ontouchend="touchUpJump()"> <img src="./img/jump.png"> </div>
+        <div id="shot" class="mobile_controlls " ontouchstart="touchDownShoot()" ontouchend="touchUpShoot()"> Shoot </div>
+
+        <div id="down" class="mobile_controlls " ontouchstart="touchDownDown()" ontouchend="touchUpDown()"> <img src="./img/downnn.png"> </div>
+
+        <div id="throw" class="mobile_controlls " ontouchstart="touchDownThrow()" ontouchend="touchUpThrow()"> Bubble </div>
+
+        <div id="canvasFullscreen" class="d-none">
+
+
+            <canvas id="canvas" class="d-none" width="720" height="480">
+
+
+            </canvas>
+            <div class="btn11">
+
+                <button id="startfull" onclick="fullscreen()" class="btn12"> Fullscreen</button>
+
+                <button id="NewGame" onclick="Restart()" class="btn12"> Restart</button>
+            </div>
+        </div>
+        <div id="startGame">
+            <h1 class="only1">Sharky</h1>
+
+            <img class="start-button" onclick="startGame(), init()" src="./img/6.Botones/Start/1.png">
+            <div class="center-description-movement">
+                <img class="description-movement" src="./img/6.Botones/Instructions 1.png">
+                <div class="display-row"><img class="description-space-button" src="./img/6.Botones/Key/Space Bar key.png">
+                    <img class="size-description" src="./img/6.Botones/Tittles/Attack tittle.png">
+                </div>
+                <p class="only">Only use SPACE BAR for attacking end boss!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-none" id="id-gameLost">
+        <img class="endscreenLost" src="./img/6.Botones/Tittles/Game Over/Recurso 13.png">
+    </div>
+    <div class="d-none endscreen" id="id-gameWon">
+        <img class="endscreenWon" src="./img/6.Botones/Tittles/You win/Mesa de trabajo 1.png">
+    </div>
+
+
+</body>
+
+</html>
