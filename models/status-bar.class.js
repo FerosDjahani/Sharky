@@ -34,7 +34,7 @@ class Statusbar extends DrawableObject {
 
     }
 
-
+    //shows how much health will get lose by hit
     resolveImageIndex() {
         if (this.percentage == 100) {
             return 5;

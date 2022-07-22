@@ -72,25 +72,20 @@ class Endboss extends MovableObject {
         this.playDeadAnimationBoss();
     }
 
-    /**
-     * This function is to check if character is at endboss screen.
-     * Then the animation of the endboss starts and it shows up.
-     */
+    //Endboss animating and movements
 
     animateEndboss() {
-            let refreshInterval = setInterval(() => {
-                if (this.world.character.x > 3400 && !this.isDead()) {
-                    this.playAnimation(this.IMAGES_ENDBOSS);
-                    setTimeout(() => {
-                        clearInterval(refreshInterval);
-                        this.endbossInWater = true;
-                    }, 350);
-                };
-            }, 1000 / 20);
-        }
-        /**
-         * This function is for animating endboss if idle/hurt/dead last picture
-         */
+        let refreshInterval = setInterval(() => {
+            if (this.world.character.x > 3400 && !this.isDead()) {
+                this.playAnimation(this.IMAGES_ENDBOSS);
+                setTimeout(() => {
+                    clearInterval(refreshInterval);
+                    this.endbossInWater = true;
+                }, 350);
+            };
+        }, 1000 / 20);
+    }
+
     animate() {
 
         setInterval(() => {
@@ -120,9 +115,7 @@ class Endboss extends MovableObject {
 
 
 
-    /**
-     * This function is for animating endboss if dead.
-     */
+
     playDeadAnimationBoss() {
         let clearThat = setInterval(() => {
             if (this.isDead()) {

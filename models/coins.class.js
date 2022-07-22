@@ -16,9 +16,7 @@ class Coin extends MovableObject {
             this.height = 40;
             this.animate();
         }
-        /**
-         * This function is for animating the coins
-         */
+        //animate items
     animate() {
         this.animateCoinsInterval = setInterval(() => {
             this.playAnimation(this.COINS_IMAGES);

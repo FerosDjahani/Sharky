@@ -6,9 +6,7 @@ class Fish extends MovableObject {
     x = 500 + Math.random() * 4000;
     speed = 0.1 + Math.random() * 0.5;
 
-    /**
-     * This funtion is for animating each fish
-     */
+    //animating and movements of the enemies
 
     animate(variant) {
 
@@ -29,11 +27,7 @@ class Fish extends MovableObject {
         }, 100);
     }
 
-    /**
-     * This function is checking the fish variant;
-     * Normal fishes swimming left, jelly fishes swimming up;
-     * @param {number} variant 1 is normal fish; variant 2 is jelly fish
-     */
+
 
     checkFish(variant) {
         if (variant == 2) {
@@ -42,10 +36,6 @@ class Fish extends MovableObject {
             this.swimLeft();
         }
     }
-
-    /**
-     * This function is for setting the value of the normal fishes
-     */
 
     setValueNormalFishes() {
         this.speed = 0.2 + Math.random() * 4;

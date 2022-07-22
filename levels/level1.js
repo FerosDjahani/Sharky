@@ -1,5 +1,4 @@
-// LEVEL 1 
-
+//Game Objects 
 const level1 = new Level(enemies = [
         new FishGreen(),
         new FishGreen(),

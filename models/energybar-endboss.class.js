@@ -12,18 +12,16 @@ class EnergybarEndboss extends DrawableObject {
     ];
 
     constructor(x, y, world) {
-            super().loadImage('././img/4. Marcadores/orange/100_  copia.png');
-            this.loadImages(this.IMAGES);
-            this.y = y - 50;
-            this.x = x;
-            this.width = 150;
-            this.height = 50;
-            this.checkEnergybar();
-            this.world = world;
-        }
-        /**
-         * This function is for setting the energybar of endboss
-         */
+        super().loadImage('././img/4. Marcadores/orange/100_  copia.png');
+        this.loadImages(this.IMAGES);
+        this.y = y - 50;
+        this.x = x;
+        this.width = 150;
+        this.height = 50;
+        this.checkEnergybar();
+        this.world = world;
+    }
+
     checkEnergybar() {
         setInterval(() => {
 

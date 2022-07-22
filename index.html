@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharky</title>
-    <!-- SCRIPTS -->
+
     <script src="models/drawable-object.class.js"></script>
     <script src="models/movable-object.class.js"></script>
     <script src="models/charackter.class.js"></script>
@@ -35,15 +35,16 @@
     <script src="levels/level1.js"></script>
 
 
-    <!-- CSS -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- ONLOAD -->
+
 
 <body>
 
-    <div id="bg-img" class="bg-img">
+
+    <div id="bg-img" class="background-img">
         <div id="left" class="mobile_controlls " ontouchstart="touchDownLeft()" ontouchend="touchUpLeft()">
 
             <img src="./img/arrow_left.png"> </div>
@@ -60,8 +61,8 @@
 
 
             <canvas id="canvas" class="d-none" width="720" height="480">
-
-
+                
+                
             </canvas>
             <div class="btn11">
 
@@ -74,11 +75,24 @@
             <h1 class="only1">Sharky</h1>
 
             <img class="start-button" onclick="startGame(), init()" src="./img/6.Botones/Start/1.png">
-            <div class="center-description-movement">
-                <img class="description-movement" src="./img/6.Botones/Instructions 1.png">
-                <div class="display-row"><img class="description-space-button" src="./img/6.Botones/Key/Space Bar key.png">
-                    <img class="size-description" src="./img/6.Botones/Tittles/Attack tittle.png">
+            <div class="control-box">
+                <img class="control-box" src="./img/6.Botones/Instructions 1.png">
+
+                <div class="mobile-controls">
+                    <p>Mobile:</p>
+                    <p> <img src="./img/arrow_left.png">: walk left</p>
+                    <p> <img src="./img/arrow_right.png">: walk right</p>
+                    <p> <img src="./img/jump.png">: jump</p>
+                    <p> <img src="./img/downnn.png">: jump</p>
+                    <p>Fish: throw fish</p>
+                    <p>Shoot: shoot Bubble</p>
                 </div>
+                <div class="display-row"><img class="attack" src="./img/6.Botones/Key/Space Bar key.png">
+                    <img class="size-description" src="./img/6.Botones/Tittles/Attack tittle.png">
+
+
+                </div>
+
                 <p class="only">Only use SPACE BAR for attacking end boss!</p>
             </div>
         </div>

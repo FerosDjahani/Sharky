@@ -9,7 +9,6 @@ class Character extends MovableObject {
     animateCharacterInterval;
     moveCharacterInterval;
 
-    //IMAGES TO LOAD
     IMAGES_IDLE = [
         './img/1.Sharkie/1.IDLE/1.png',
         './img/1.Sharkie/1.IDLE/2.png',
@@ -81,9 +80,7 @@ class Character extends MovableObject {
         this.animate();
     }
 
-    /**
-     * This function is for moving the character
-     */
+    //CHARACTER ANIMATING AND MOVEMENTS
 
     movement() {
 
@@ -113,15 +110,12 @@ class Character extends MovableObject {
     }
 
     gameEnd() {
-            if (!this.world.endboss.endbossDeadLast) {
-                return this.x < 3500;
-            } else {
-                return this.x < 4000;
-            }
+        if (!this.world.endboss.endbossDeadLast) {
+            return this.x < 3500;
+        } else {
+            return this.x < 4000;
         }
-        /**
-         * This function is for animate the character if idle/swimming/hurt/dead.
-         */
+    }
 
     animate() {
         this.animateCharacterInterval = setInterval(() => {
@@ -153,19 +147,19 @@ class Character extends MovableObject {
         }, 75);
     }
 
-    //swim speed right
+
 
     swimRight() {
         this.x += this.speed;
     }
 
-    //swim speed down
+
 
     swimDown() {
         this.y += this.speed;
     }
 
-    //collect coins + 10
+    //COLLISION CHARACTER AND ITEMS
 
     collectCoins() {
         this.collect_sound.play();
@@ -177,7 +171,7 @@ class Character extends MovableObject {
         }
     }
 
-    //collect poison + 10
+
 
     collectPoisons() {
         this.collect_sound2.play();

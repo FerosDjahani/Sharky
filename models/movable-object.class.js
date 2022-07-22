@@ -8,22 +8,19 @@ class MovableObject extends DrawableObject {
     speed = 3;
     otherDirection = false;
 
-    //swim Left
+    //character and main game instructions
+
 
     swimLeft() {
         this.x -= this.speed;
     }
 
-    //swim Up
+
 
     swimUp() {
         this.y -= this.speed;
     }
 
-    /**
-     * This function is for animating all with the right pictures of array
-     * @param {string} images 
-     */
 
     playAnimation(images) {
 
@@ -34,11 +31,6 @@ class MovableObject extends DrawableObject {
 
     }
 
-    /**
-     * This function is checking the collision (+40 because of better character collision)
-     * @param {string} mo 
-     * @returns 
-     */
 
     isColliding(mo) {
         return this.x + this.width > mo.x &&
@@ -47,9 +39,7 @@ class MovableObject extends DrawableObject {
             this.y + 40 < mo.y + mo.height;
     };
 
-    /**
-     * This function is checking if hit and removing energy
-     */
+
 
     hit() {
 
@@ -66,10 +56,6 @@ class MovableObject extends DrawableObject {
         }
     };
 
-    /**
-     * This function is checking if hurt within 0.5sec
-     * @returns boolean
-     */
 
     isHurt() {
 
@@ -78,18 +64,9 @@ class MovableObject extends DrawableObject {
         return timePassed < 0.5;
     }
 
-    /**
-     * This function is checking if dead
-     * @returns boolean
-     */
-
     isDead() {
         return this.energy == 0;
     }
-
-    /**
-     * This function is for throwing bubble or poison
-     */
 
     throw () {
 
