@@ -111,11 +111,6 @@ class Endboss extends MovableObject {
 
     }
 
-
-
-
-
-
     playDeadAnimationBoss() {
         let clearThat = setInterval(() => {
             if (this.isDead()) {

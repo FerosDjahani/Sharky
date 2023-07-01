@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharky</title>
-
+    <link id="favicon" rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <script src="models/drawable-object.class.js"></script>
     <script src="models/movable-object.class.js"></script>
     <script src="models/charackter.class.js"></script>
@@ -71,32 +71,50 @@
                 <button id="NewGame" onclick="Restart()" class="btn12"> Restart</button>
             </div>
         </div>
-        <div id="startGame">
-            <h1 class="only1">Sharky</h1>
 
-            <img class="start-button" onclick="startGame(), init()" src="./img/6.Botones/Start/1.png">
-            <div class="control-box">
-                <img class="control-box" src="./img/6.Botones/Instructions 1.png">
-
-                <div class="mobile-controls">
-                    <p>Mobile:</p>
-                    <p> <img src="./img/arrow_left.png">: walk left</p>
-                    <p> <img src="./img/arrow_right.png">: walk right</p>
-                    <p> <img src="./img/jump.png">: jump</p>
-                    <p> <img src="./img/downnn.png">: jump</p>
-                    <p>Fish: throw fish</p>
-                    <p>Shoot: shoot Bubble</p>
-                </div>
-                <div class="display-row"><img class="attack" src="./img/6.Botones/Key/Space Bar key.png">
-                    <img class="size-description" src="./img/6.Botones/Tittles/Attack tittle.png">
+        <div id="info" class="btn5">
+            <div id="startGame">
+                <h1 class="only1">Sharky</h1>
 
 
-                </div>
-
-                <p class="only">Only use SPACE BAR for attacking end boss!</p>
+                <button onclick="startGame(), init()" class="fullscreen"> Start</button>
+                <button onclick="Info()" class="fullscreen"> Info</button>
             </div>
+
+
+
+            <div id="infoBox" class="info_boxx d-none">
+                <div>
+                    <button class="closebtn" onclick="closeInfo()">Close</button>
+
+                    <div class="only">The only way to kill the Chickens is, to jump on them.</div>
+                    <div class="only">Only use SPACE BAR for hit Endboss!</div>
+                    <div class="con">
+                        <p>Desktop:</p>
+                        <p>← :swim left</p>
+                        <p>→ :swim right</p>
+                        <p> ↑ :swim Down</p>
+                        <p>↓ :swim Down</p>
+                        <p>D: throw Sharky Jr.</p>
+                        <p>Space: Poison Bubble</p>
+                    </div>
+                    -------------------------------------------------------------------------------------------
+                    <div>
+                        <p>Mobile:</p>
+                        <p> <img src="./img/arrow_left.png">: walk left</p>
+                        <p> <img src="./img/arrow_right.png">: walk right</p>
+                        <p> <img src="./img/jump.png">: jump</p>
+                        <p> <img src="./img/downnn.png">: jump</p>
+                        <p>Fish: throw fish</p>
+                        <p>Shoot: shoot Bubble</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+
 
     <div class="d-none" id="id-gameLost">
         <img class="endscreenLost" src="./img/6.Botones/Tittles/Game Over/Recurso 13.png">

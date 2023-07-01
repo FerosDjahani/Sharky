@@ -58,8 +58,6 @@ canvas {
 .start-button {
     width: 250px;
     height: 100px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .size-description {
@@ -93,6 +91,32 @@ canvas {
     position: relative;
     bottom: 40px;
     left: 680px;
+}
+
+.btn5 {
+    display: flex;
+    justify-content: center;
+    right: 30%;
+}
+
+.fullscreen {
+    width: 220px;
+    height: 90px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgb(77, 2, 77);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    border: 4px solid white;
+    border-radius: 20px;
+    margin-top: 55%;
+}
+
+.fullscreen:hover {
+    background-color: rgba(4, 45, 100, 0.7);
 }
 
 
@@ -138,6 +162,20 @@ canvas {
     display: contain;
 }
 
+.info_boxx {
+    position: absolute;
+    right: 7%;
+    border: 2px solid white;
+    background-color: rgb(9, 122, 156);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+}
+
 .mobile_controlls {
     width: 70px;
     height: 70px;
@@ -161,24 +199,32 @@ canvas {
     position: absolute;
     left: 9%;
     bottom: 10%;
+    width: 45px;
+    height: 45px;
 }
 
 #right {
     position: absolute;
     left: 27%;
     bottom: 10%;
+    width: 45px;
+    height: 45px;
 }
 
 #down {
     position: absolute;
     left: 18%;
-    bottom: 2%;
+    bottom: 4%;
+    width: 45px;
+    height: 45px;
 }
 
 #jump {
     position: absolute;
-    right: 28%;
-    bottom: 10%;
+    left: 18%;
+    bottom: 16%;
+    width: 45px;
+    height: 45px;
 }
 
 #throw {
@@ -186,6 +232,8 @@ canvas {
     right: 10%;
     bottom: 10%;
     font-size: 18px;
+    width: 45px;
+    height: 45px;
 }
 
 #shot {
@@ -193,19 +241,26 @@ canvas {
     right: 19%;
     bottom: 2%;
     font-size: 18px;
+    width: 45px;
+    height: 45px;
 }
 
 .only {
-    color: purple;
+    color: rgb(83, 3, 83);
     font-weight: bold;
     font-size: 20px;
+    padding: 5px;
 }
 
 .only1 {
     color: white;
     font-weight: bold;
     font-size: 35px;
-    margin-top: -150px;
+    margin-top: 5%;
+}
+
+.con {
+    padding: 15px;
 }
 
 .mobile-controls {
@@ -218,6 +273,17 @@ canvas {
     margin-top: -47px;
 }
 
+.closebtn {
+    color: white;
+    background-color: rgb(4, 138, 138);
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    background-color: rgb(0, 77, 77);
+}
+
 @media only screen and (max-width: 720px) {
     canvas {
         width: 100%;
@@ -228,11 +294,174 @@ canvas {
     .restart_mobile {
         left: 38%;
     }
+    .btn12 {
+        display: none;
+    }
+    .fullscreen {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    canvas {
+        width: 100%;
+    }
+    .mobile_controlls {
+        display: flex;
+    }
+    .restart_mobile {
+        left: 38%;
+    }
+    .btn12 {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 820px) {
+    canvas {
+        width: 100%;
+    }
+    .mobile_controlls {
+        display: flex;
+    }
+    .restart_mobile {
+        left: 38%;
+    }
+    .btn12 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    canvas {
+        width: 100%;
+    }
+    .mobile_controlls {
+        display: flex;
+    }
+    .restart_mobile {
+        left: 38%;
+    }
+    .btn12 {
+        display: none;
+    }
+}
+
+@media only screen and (height: 360x) {
+    #canvasFullscreen {
+        position: relative;
+        width: 720px;
+        height: 360px;
+    }
+}
+
+@media only screen and (max-height: 375px) {
+    canvas {
+        height: 375px;
+    }
+    .btn12 {
+        display: none;
+    }
+    #left {
+        position: absolute;
+        left: 12%;
+        bottom: 21%;
+    }
+    #right {
+        position: absolute;
+        left: 24%;
+        bottom: 21%;
+    }
+    #down {
+        position: absolute;
+        left: 18%;
+        bottom: 14%;
+    }
+    #jump {
+        position: absolute;
+        left: 18%;
+        bottom: 29%;
+    }
+    #throw {
+        position: absolute;
+        right: 10%;
+        bottom: 21%;
+        font-size: 18px;
+    }
+    #shot {
+        position: absolute;
+        right: 19%;
+        bottom: 21%;
+        font-size: 18px;
+    }
+    .btn12 {
+        display: none;
+    }
+    .fullscreen {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+    }
+    #canvasFullscreen {
+        position: relative;
+        width: 720px;
+        height: 375px;
+    }
 }
 
 @media only screen and (max-height: 480px) {
     canvas {
-        height: 100vh;
+        height: 414px;
+    }
+    .btn12 {
+        display: none;
+    }
+    #left {
+        position: absolute;
+        left: 12%;
+        bottom: 21%;
+    }
+    #right {
+        position: absolute;
+        left: 24%;
+        bottom: 21%;
+    }
+    #down {
+        position: absolute;
+        left: 18%;
+        bottom: 14%;
+    }
+    #jump {
+        position: absolute;
+        left: 18%;
+        bottom: 29%;
+    }
+    #throw {
+        position: absolute;
+        right: 10%;
+        bottom: 21%;
+        font-size: 18px;
+    }
+    #shot {
+        position: absolute;
+        right: 19%;
+        bottom: 21%;
+        font-size: 18px;
+    }
+    .btn12 {
+        display: none;
+    }
+    .fullscreen {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+    }
+    #canvasFullscreen {
+        position: relative;
+        width: 720px;
+        height: 375px;
     }
 }
 

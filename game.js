@@ -17,8 +17,7 @@ function init() {
     canvas = document.getElementById('canvas');
     keyboard = new Keyboard();
     world = new World(canvas, keyboard);
-    responsive();
-    canvas.addEventListener("mousedown", doMouseDown, false);
+
 }
 
 
@@ -32,7 +31,16 @@ function startGame() {
     canvasFullscreen.classList.remove('d-none')
     startGame.classList.add('d-none');
     canvas.classList.remove('d-none');
+    document.getElementById('infoBox').classList.add('d-none');
 
+}
+
+function Info() {
+    document.getElementById('infoBox').classList.remove('d-none');
+}
+
+function closeInfo() {
+    document.getElementById('infoBox').classList.add('d-none');
 }
 
 //keyboard and control instructions
